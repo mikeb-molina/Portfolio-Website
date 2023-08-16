@@ -1,0 +1,234 @@
+/* 
+this is a comment box, can be used to store color codes
+*/
+:root {
+    --background-color: lightblue;
+    --hyperlink-color: #ac22ca;
+    --hyperlink-visited: darkblue;
+    --hyperlink-hover: #2b2b2b;
+    --hyperlink-active: red;
+    --primary-button: blue;
+    --primary-button-font: white;
+    --secondary-button: aqua;
+    --secondary-button-font: black;
+    --button-border: black;
+    --grid-item: lightgray;
+    --sun-trans1: #edc655;
+    --sun-trans2: #fcffad;
+    --sun-trans3: #f76414;
+    --font-size: 22px;
+
+}
+body{ 
+    background-color: var(--background-color);
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height:1.6;
+    font-size: 16px
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    color: var(--hyperlink-color);
+}
+a:visited {
+    color: var(--hyperlink-visited);
+}
+
+a:hover, a:focus{
+    text-decoration-color: var(--hyperlink-hover)
+}
+
+a:active {
+    color: var(--hyperlink-active)
+}
+h1{
+    font-size: 45px;
+    font-weight: 700;
+}
+p{
+    font-size: var(--font-size);
+    font-style: italic;
+}
+button, 
+.button{
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: var(--primary-button);
+    color: var(--primary-button-font);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid var(--button-border);
+    transition: opacity 0.2s;
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.button_secondary{
+background-color: var(--secondary-button);
+color: var(--secondary-button-font);
+}
+.navigation-list__item-active{
+   text-decoration: none
+}
+.profile_portrait {
+    float: left;
+    width: 250px;
+    height: auto;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+.page-footer{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.profile{
+    flex: 1 1 100px;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.6;
+    font-size: var(--font-size);
+    text-align: center;
+}
+.page-header{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+.page-header__item {
+    flex: 0 1 200px;
+}
+.page-header__item:last-child{
+    flex-grow: 1;
+    text-align: right;
+}
+.navigation-list{
+    list-style-type: none;
+}
+.navigation-list li{
+    display: inline-block;
+    margin-left: 15px;
+}
+.grid{
+    display: inline-block;
+    width: 33;
+    text-align: center;
+}
+@supports (display: grid) {
+    .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+    }
+}
+.grid__item{
+    background-color: var(--grid-item);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+}
+.grid__item :last-child{
+    grid-column: 3/3;
+    grid-row: 1/3;
+}
+.contact-info{
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+}
+.contact-info__me{
+    text-align: center;
+}
+.about{
+    display: grid;
+}
+.about__me{
+    text-align: center;
+}
+.about__me li{
+    list-style-type: none;
+}
+.grid-table{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--grid-item);
+    text-align: center;
+}
+.grid-table__item{
+    text-align: center;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+@media all and (max-width: 500px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media all and (max-width: 750px) {
+    .grid{
+        grid-gap: 10px;
+    }
+    .grid__item :last-child{
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+    }
+    h1{
+        font-size: var(--font-size);
+    }
+}
+@keyframes color-change {
+    0%{
+        fill: var(--sun-trans1);
+    }
+    50%{
+        fill: var(--sun-trans2);
+    }
+    100%{
+        fill: var(--sun-trans3);
+    }
+}
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+    from{
+        transform: translate(0, 50px);
+    }
+    to{
+        transform: translate(200px, 50px);
+    }
+}
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+  }
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
