@@ -2,8 +2,8 @@
 this is a comment box, can be used to store color codes
 */
 :root {
-    --background-color: rgb(229, 229, 229);
-    --hyperlink-color: #ac22ca;
+    --background-color: lightblue;
+    --hyperlink-color: #22b6caf1;
     --hyperlink-visited: darkblue;
     --hyperlink-hover: #2b2b2b;
     --hyperlink-active: red;
