@@ -36,6 +36,7 @@ a:active {
     color: red
 }
 h1{
+    text-align: center;
     font-size: 45px;
     font-weight: 700;
 }
@@ -155,19 +156,6 @@ color: black;
     margin: 0;
     }
 }
-.grid__item{
-    background-color: lightgray;
-    max-width: auto;
-    min-height: auto;
-    margin: 0;
-}
-.grid__item :last-child{
-    -ms-grid-column: 1;
-    grid-column: 1/6;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 3/3;
-}
 .grid-item-image{
     max-width: 50%;
     max-height: 400PX;
@@ -193,8 +181,20 @@ color: black;
 .about__me{
     text-align: center;
 }
+.aboutme_portrait {
+    float: left;
+    width: 450px;
+    height: auto;
+    margin-right: 40px;
+    border-radius: 25%;
+}
 .about__me li{
     list-style-type: none;
+}
+.expTable{
+    width: 75%;
+    margin: 20px auto;
+    align-content: center;
 }
 .grid-table{
     display: -ms-grid;
