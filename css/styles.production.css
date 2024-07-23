@@ -173,6 +173,7 @@ color: black;
 }
 .contact-info__me{
     text-align: center;
+    font-size: medium;
 }
 .about{
     display: -ms-grid;
